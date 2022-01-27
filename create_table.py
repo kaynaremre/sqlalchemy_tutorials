@@ -22,6 +22,8 @@ meta.create_all(engine)
 ins = students.insert()
 ins = students.insert().values(name='Emre', lastname='Kaynar')
 conn = engine.connect()
+
+# Execute
 result = conn.execute(ins)
 
 conn.execute(students.insert(), [

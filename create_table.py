@@ -15,3 +15,6 @@ students = Table(
 )
 
 meta.create_all(engine)
+
+ins = students.insert().values(name = 'Karan')
+print(ins.compile().params)
